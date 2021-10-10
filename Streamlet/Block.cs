@@ -4,18 +4,19 @@ using System.Text;
 
 namespace Streamlet
 {
+    using BlockHash = System.Int32;
     public struct Block
     {
         public int epoch;
-        public int parentHash;
+        public BlockHash parentHash;
         public string content;
-        public Block(int epoch, int parentHash, string content)
+        public Block(int epoch, BlockHash parentHash, string content)
         {
             this.epoch = epoch;
             this.parentHash = parentHash;
             this.content = content;
         }
-        public int GetHash()
+        public BlockHash GetHash()
         {
             int result = 13;
             result = result * 31 + epoch;

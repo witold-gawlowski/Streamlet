@@ -8,10 +8,10 @@ namespace Streamlet
         static int N = 5;
         static void Main(string[] args)
         {
-            var nodes = new List<NodeScript>();
+            var nodes = new List<Node>();
             for(int i=0; i<N; i++)
             {
-                var newNode = new NodeScript(i, N);
+                var newNode = new Node(i, N);
                 nodes.Add(newNode);
             }
             SchedulerScript scheduler = new SchedulerScript(nodes);
